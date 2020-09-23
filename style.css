@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container {
+  
+    height: 100%;
+    margin-top: 60px;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+
+}
+.graphic-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    position: relative;
+}
+.graphic-x {
+    position: relative;
+    width: 3px;
+    height: 500px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.graphic-x::before {
+    content: ''; 
+    position: absolute;
+    left: -9px;
+    top: -20px;
+    border: 10px solid transparent; 
+    border-bottom: 10px solid black;
+}
+.graphic-y {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 3px;
+    background-color: black;
+}
+.graphic-y::before {
+    content: ''; 
+    position: absolute;
+    right: -20px;
+    top: -9px;
+    border: 10px solid transparent; 
+    border-left: 10px solid black;
+}
+.graphic-x .line {
+    width: 10px;
+    height: 3px;
+    background-color: black;
+}
+.graphic-x .line::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(169, 191, 204, 0.342);
+    width: 500px;
+    height: 3px;
+}
+.graphic-y .line {
+    width: 3px;
+    height: 10px;
+    background-color: black;
+    transform: rotateX(180deg);
+}
+.graphic-y .line::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(169, 191, 204, 0.342);
+    width: 3px;
+    height: 500px;
+}
+.graphic-name-x {
+    position: absolute;
+    left: -45px;
+    top: -15px;
+    font-size: 25px;
+}
+.graphic-name-y {
+    position: absolute;
+    right: -15px;
+    bottom: -45px;
+    font-size: 25px;
+}
+
+.graphic-x .line:first-child {
+    visibility: hidden;
+}
+.graphic-x .line:last-child {
+    visibility: hidden;
+}
+.graphic-y .line:first-child {
+    visibility: hidden;
+}
+.graphic-y .line:last-child {
+    visibility: hidden;
+}
+.label-number {
+    position: absolute;
+    left: -30px;
+}
+.number {
+    padding-bottom: 14px;
+    margin-bottom: 1px;
+}
+.number:last-child {
+    padding-bottom: 0px;
+}
+.menu-container {
+    margin-left: 50px;
+}
+.circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 30px;
+    bottom: 33px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+    border-radius: 50px;
+    border: 2px solid blue;
+}
+
