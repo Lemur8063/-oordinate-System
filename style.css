@@ -4,7 +4,6 @@
     list-style: none;
 }
 .container {
-  
     height: 100%;
     margin-top: 60px;
     margin-left: 100px;
@@ -40,6 +39,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: start;
     width: 500px;
     height: 3px;
     background-color: black;
@@ -82,30 +83,44 @@
 }
 .graphic-name-x {
     position: absolute;
-    left: -45px;
-    top: -15px;
+    left: -30px;
+    top: -40px;
     font-size: 25px;
 }
 .graphic-name-y {
     position: absolute;
-    right: -15px;
-    bottom: -45px;
+    right: -40px;
+    bottom: -30px;
     font-size: 25px;
 }
-.graphic-x .line:last-child {
-    visibility: hidden;
-}
 
-.graphic-y .line:last-child {
-    visibility: hidden;
-}
-.label-number {
+.label-number-x {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     left: -30px;
+    align-items: flex-end;
+    margin-bottom: 15px
 }
-.number {
-    padding-bottom: 14px;
-    margin-bottom: 1px;
+.label-number-x div {
+    margin-bottom: 15px;
+}
+.label-number-y {
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    bottom: -30px;
+    align-items: flex-end;
+    margin-left: 27px;
+}
+.label-number-y div:not(:last-child) {
+    padding-left: 25px;
+}
+.label-number-y div:nth-child(6) {
+    padding-left: 20px;
+}
+.label-number-y div:nth-child(-n+5) {
+    padding-left: 17px;
 }
 .number:last-child {
     padding-bottom: 0px;
@@ -117,13 +132,52 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    left: -6px;
-    margin-left: 30px;
+    left: -9px;
+    margin-left: 33px;
     margin-bottom: 33px; 
     bottom: -6px;
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
     border-radius: 50px;
     border: 2px solid blue;
+    transition: all 1s ease-out;
 }
+#square {
+    position: absolute;
+    width: 10px;
+	height: 10px;
+    border: 2px solid green;
+    left: -9px;
+    margin-left: 66px;
+    margin-bottom: 132px; 
+    bottom: -6px;
+    transition: all 1s ease-out;
+}
+ #triangle {
+    position: absolute;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+    border-bottom: 13px solid rgba(134, 20, 156, 0.767);
+    left: -9px;
+    margin-left: 231px;
+    margin-bottom: 165px; 
+    bottom: -6px;
+    transition: all 1s ease-out;
+}
+input {
+    width: 50px;
+    height: 25px;
+    margin: 10px 10px 10px 0px;
+}
+.button {
+    width: 100px;
+}
+.error {
+    color: red;
+   
+    opacity: 0;
+    transition: all 2s ease-out;
+}
+
+
 
