@@ -1,5 +1,4 @@
 # Coordinate-System
-# Work in progress
 
 https://lemur8063.github.io/Coordinate-System/
 
